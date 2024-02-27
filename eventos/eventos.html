@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo sobre eventos com JavaScript</title>
+</head>
+<body>
+    <figure>
+        <img src="presente-fechado.gif" alt="Presente Fechado" id="presente">
+    </figure>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // function teste(){
+        //     alert('Você clicou na imagem');
+        // }
+
+        window.onload = function() {
+            var presente = document.querySelector('#presente');
+            presente.addEventListener("click", t => {
+                if (presente.alt == 'Presente Fechado'){
+                presente.src = "presente-aberto.gif";
+                presente.alt = "Presente Aberto";
+            }
+            else {
+                presente.src = "presente-fechado.gif";
+                presente.alt = "Presente Fechado";
+            }
+            })
+        }
+    </script>
+</body>
+</html>
